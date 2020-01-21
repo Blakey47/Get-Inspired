@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		028FCDDF23D7811F004194DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FCDDE23D7811F004194DF /* AppDelegate.swift */; };
 		028FCDE123D7811F004194DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FCDE023D7811F004194DF /* SceneDelegate.swift */; };
-		028FCDE323D7811F004194DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FCDE223D7811F004194DF /* ViewController.swift */; };
-		028FCDE623D7811F004194DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028FCDE423D7811F004194DF /* Main.storyboard */; };
+		028FCDE323D7811F004194DF /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FCDE223D7811F004194DF /* InitialVC.swift */; };
 		028FCDE823D78124004194DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 028FCDE723D78124004194DF /* Assets.xcassets */; };
 		028FCDEB23D78124004194DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028FCDE923D78124004194DF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +18,7 @@
 		028FCDDB23D7811F004194DF /* Get Inspired.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get Inspired.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		028FCDDE23D7811F004194DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		028FCDE023D7811F004194DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		028FCDE223D7811F004194DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		028FCDE523D7811F004194DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		028FCDE223D7811F004194DF /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
 		028FCDE723D78124004194DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		028FCDEA23D78124004194DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		028FCDEC23D78124004194DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +56,7 @@
 			children = (
 				028FCDDE23D7811F004194DF /* AppDelegate.swift */,
 				028FCDE023D7811F004194DF /* SceneDelegate.swift */,
-				028FCDE223D7811F004194DF /* ViewController.swift */,
-				028FCDE423D7811F004194DF /* Main.storyboard */,
+				028FCDE223D7811F004194DF /* InitialVC.swift */,
 				028FCDE723D78124004194DF /* Assets.xcassets */,
 				028FCDE923D78124004194DF /* LaunchScreen.storyboard */,
 				028FCDEC23D78124004194DF /* Info.plist */,
@@ -127,7 +124,6 @@
 			files = (
 				028FCDEB23D78124004194DF /* LaunchScreen.storyboard in Resources */,
 				028FCDE823D78124004194DF /* Assets.xcassets in Resources */,
-				028FCDE623D7811F004194DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				028FCDE323D7811F004194DF /* ViewController.swift in Sources */,
+				028FCDE323D7811F004194DF /* InitialVC.swift in Sources */,
 				028FCDDF23D7811F004194DF /* AppDelegate.swift in Sources */,
 				028FCDE123D7811F004194DF /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +143,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		028FCDE423D7811F004194DF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				028FCDE523D7811F004194DF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		028FCDE923D78124004194DF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +282,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.darraghblake.Get-Inspired";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.darraghblake.Get-Inspired";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
