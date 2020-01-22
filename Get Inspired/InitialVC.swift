@@ -75,7 +75,15 @@ class InitialVC: UIViewController {
     }
     
     @objc func enterButtonPressed() {
-        print("Enter Button Pressed")
+        NetworkManager.shared.getQuoteOfTheDay { (quoteOfTheDay, errorMessage) in
+            
+            guard let quoteOfTheDay = quoteOfTheDay else {
+                print(errorMessage ?? "An error was thrown.")
+                return
+            }
+            
+            print("Quote Of The Day: \(quoteOfTheDay.contents.quotes[0].quote)")
+        }
     }
 
 

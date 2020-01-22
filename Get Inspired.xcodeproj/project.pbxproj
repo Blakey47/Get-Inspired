@@ -12,6 +12,8 @@
 		028FCDE323D7811F004194DF /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FCDE223D7811F004194DF /* InitialVC.swift */; };
 		028FCDE823D78124004194DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 028FCDE723D78124004194DF /* Assets.xcassets */; };
 		028FCDEB23D78124004194DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028FCDE923D78124004194DF /* LaunchScreen.storyboard */; };
+		028FCDF523D7929A004194DF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FCDF423D7929A004194DF /* NetworkManager.swift */; };
+		028FCDF823D8D10B004194DF /* QuoteOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FCDF723D8D10B004194DF /* QuoteOfTheDay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		028FCDE723D78124004194DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		028FCDEA23D78124004194DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		028FCDEC23D78124004194DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		028FCDF423D7929A004194DF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		028FCDF723D8D10B004194DF /* QuoteOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteOfTheDay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,24 @@
 		028FCDDD23D7811F004194DF /* Get Inspired */ = {
 			isa = PBXGroup;
 			children = (
+				028FCDF923D8D265004194DF /* Model */,
 				028FCDDE23D7811F004194DF /* AppDelegate.swift */,
 				028FCDE023D7811F004194DF /* SceneDelegate.swift */,
 				028FCDE223D7811F004194DF /* InitialVC.swift */,
 				028FCDE723D78124004194DF /* Assets.xcassets */,
 				028FCDE923D78124004194DF /* LaunchScreen.storyboard */,
 				028FCDEC23D78124004194DF /* Info.plist */,
+				028FCDF423D7929A004194DF /* NetworkManager.swift */,
 			);
 			path = "Get Inspired";
+			sourceTree = "<group>";
+		};
+		028FCDF923D8D265004194DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				028FCDF723D8D10B004194DF /* QuoteOfTheDay.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028FCDF823D8D10B004194DF /* QuoteOfTheDay.swift in Sources */,
+				028FCDF523D7929A004194DF /* NetworkManager.swift in Sources */,
 				028FCDE323D7811F004194DF /* InitialVC.swift in Sources */,
 				028FCDDF23D7811F004194DF /* AppDelegate.swift in Sources */,
 				028FCDE123D7811F004194DF /* SceneDelegate.swift in Sources */,
