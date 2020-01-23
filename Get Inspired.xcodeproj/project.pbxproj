@@ -14,6 +14,7 @@
 		028FCDEB23D78124004194DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028FCDE923D78124004194DF /* LaunchScreen.storyboard */; };
 		028FCDF523D7929A004194DF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FCDF423D7929A004194DF /* NetworkManager.swift */; };
 		028FCDF823D8D10B004194DF /* QuoteOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FCDF723D8D10B004194DF /* QuoteOfTheDay.swift */; };
+		028FCDFB23D9D3D6004194DF /* QuoteCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028FCDFA23D9D3D6004194DF /* QuoteCategoryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		028FCDEC23D78124004194DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028FCDF423D7929A004194DF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		028FCDF723D8D10B004194DF /* QuoteOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteOfTheDay.swift; sourceTree = "<group>"; };
+		028FCDFA23D9D3D6004194DF /* QuoteCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCategoryVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				028FCDE923D78124004194DF /* LaunchScreen.storyboard */,
 				028FCDEC23D78124004194DF /* Info.plist */,
 				028FCDF423D7929A004194DF /* NetworkManager.swift */,
+				028FCDFA23D9D3D6004194DF /* QuoteCategoryVC.swift */,
 			);
 			path = "Get Inspired";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				028FCDF823D8D10B004194DF /* QuoteOfTheDay.swift in Sources */,
 				028FCDF523D7929A004194DF /* NetworkManager.swift in Sources */,
 				028FCDE323D7811F004194DF /* InitialVC.swift in Sources */,
+				028FCDFB23D9D3D6004194DF /* QuoteCategoryVC.swift in Sources */,
 				028FCDDF23D7811F004194DF /* AppDelegate.swift in Sources */,
 				028FCDE123D7811F004194DF /* SceneDelegate.swift in Sources */,
 			);

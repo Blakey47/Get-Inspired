@@ -21,15 +21,22 @@ class InitialVC: UIViewController {
     }
     
     func configure() {
+        configureNavigationController()
         confiureQuoteImage()
         configureGetInspiredLabel()
         configureEnterButton()
+        configureAnimations()
+    }
+    
+    func configureNavigationController() {
+        navigationController?.navigationBar.isHidden = true
     }
     
     func confiureQuoteImage() {
         view.addSubview(quoteImage)
         quoteImage.image = UIImage(named: "single-quote")
         quoteImage.contentMode = .scaleAspectFit
+        quoteImage.alpha = 0
         quoteImage.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -46,6 +53,7 @@ class InitialVC: UIViewController {
         getInspiredLabel.font = UIFont.preferredFont(forTextStyle: .title1)
         getInspiredLabel.font = UIFont.systemFont(ofSize: 25, weight: .bold)
         getInspiredLabel.textAlignment = .center
+        getInspiredLabel.alpha = 0
         getInspiredLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -62,21 +70,41 @@ class InitialVC: UIViewController {
         enterButton.setTitleColor(.white, for: .normal)
         enterButton.backgroundColor = .black
         enterButton.layer.cornerRadius = 10
+        enterButton.alpha = 0
         enterButton.translatesAutoresizingMaskIntoConstraints = false
         
         enterButton.addTarget(self, action: #selector(enterButtonPressed), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            enterButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
+            enterButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60),
             enterButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80),
             enterButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80),
             enterButton.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     
+    func configureAnimations() {
+        if getInspiredLabel.alpha == 0 && enterButton.alpha == 0 && quoteImage.alpha == 0 {
+            UIView.animate(withDuration: 1.4, animations: {
+                self.quoteImage.alpha = 1
+                self.getInspiredLabel.alpha = 1
+                self.enterButton.alpha = 1
+            }) { (true) in
+                
+            }
+        } else {
+            UIView.animate(withDuration: 1.0, animations: {
+                self.quoteImage.alpha = 0
+                self.getInspiredLabel.alpha = 0
+                self.enterButton.alpha = 0
+            }) { (true) in
+                
+            }
+        }
+    }
+    
     @objc func enterButtonPressed() {
         NetworkManager.shared.getQuoteOfTheDay { (quoteOfTheDay, errorMessage) in
-            
             guard let quoteOfTheDay = quoteOfTheDay else {
                 print(errorMessage ?? "An error was thrown.")
                 return
@@ -84,6 +112,9 @@ class InitialVC: UIViewController {
             
             print("Quote Of The Day: \(quoteOfTheDay.contents.quotes[0].quote)")
         }
+        configureAnimations()
+        let quoteCategoryVC = QuoteCategoryVC()
+        navigationController?.pushViewController(quoteCategoryVC, animated: true)
     }
 
 
